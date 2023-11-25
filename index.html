@@ -20,8 +20,8 @@
     </header>
     <!--Main content-->
     <main>
-        <section id="about">
-            <img src="img/Roxana.Valdina.jpg" alt="Roxana Valdina">
+        <section id="about" class="about-me">
+            <div class="about-me-content">            
             <h1>Roxana Valdina</h1>
             <p>I am a passionate lifelong learner, dedicated to growth and the deep exploration of challenges 
                 that push me beyond my comfort zone. My journey toward becoming a software engineer began
@@ -32,8 +32,10 @@
                 that genuinely impact people's lives. This path in software engineering is 
                 more than a career trajectory I've chosen; it's a testament to my belief that 
                 with passion and perseverance, anything is possible.</p>
+            </div>
+            <img src="img/Roxana.Valdina.jpg" alt="Roxana Valdina">
         </section>
-        <section id="skills">
+        <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skills-category">
@@ -94,14 +96,23 @@
         </section>
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project-item">
-               <img src="img/ToDo List.jpg" alt="To-Do List Project">
-               <p>This To-Do List application is a dynamic tool for efficient task management, featuring task creation, categorization into 'Business' and 'Personal', and persistent local storage. Designed with a responsive layout for compatibility across devices, it leverages HTML5, CSS3, and JavaScript for a seamless user experience. Future updates will introduce new categories, structured task display, and deadline setting functionalities.</p> 
-            </div>
-            <div class="project-item">
-                <img src="img/moving snake.jpg" alt="Snake Game Project">
-                <img src="img/Game over snake.jpg" alt="Snake Game Project">
-                <p>This Java implementation of the classic Snake game serves as a practical exercise in GUI development, event handling, and game logic using Java Swing. It features engaging gameplay with intuitive keyboard controls, dynamic collision detection, real-time score tracking, and offers a comparison between switch/case and if/else logic. This project is an excellent resource for understanding color handling in Java and exploring GUI development nuances, making it a valuable learning tool for Java enthusiasts.</p>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="img/ToDo List.jpg" alt="To-Do List Project">
+                    <p>This To-Do List application is a dynamic tool for efficient task management, featuring task creation,
+                        categorization into 'Business' and 'Personal', and persistent local storage. Designed with a responsive
+                        layout for compatibility across devices, it leverages HTML5, CSS3, and JavaScript for a seamless user
+                        experience. Future updates will introduce new categories, structured task display, and deadline setting
+                        functionalities.</p>
+                </div>
+                <div class="project-item">
+                    <img src="img/snake.jpg" alt="Snake Game Project">                    
+                    <p>This Java implementation of the classic Snake game serves as a practical exercise in GUI development,
+                        event handling, and game logic using Java Swing. It features engaging gameplay with intuitive keyboard
+                        controls, dynamic collision detection, real-time score tracking, and offers a comparison between
+                        switch/case and if/else logic. This project is an excellent resource for understanding color handling in
+                        Java and exploring GUI development nuances, making it a valuable learning tool for Java enthusiasts.</p>                       
+                </div>
             </div>
         </section>
         <section id="features">
