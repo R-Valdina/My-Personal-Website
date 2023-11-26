@@ -1,7 +1,7 @@
 /* start by setting some const for colors being used */
 :root {
     --primary-grey: #7393B3;
-    --primary-black: #333;    
+    --primary-black: #333;
     --primary-button: #007bff;
 }
 
@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Body Styles */
@@ -25,13 +25,13 @@ header {
     background-color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 01.125rem);
-    
+
 }
 
-header nav ul li a{
+header nav ul li a {
     color: var(--primary-black);
     font-weight: bold;
-    
+
 }
 
 nav ul {
@@ -50,19 +50,22 @@ main {
     padding: 20px;
     text-align: center;
 }
+
 H1 {
     font-size: 35PX;
     text-align: center;
     margin-bottom: 2rem;
-    margin-right: auto;/* adjust my name to be more centered with skills section and the about me content */
+    margin-right: auto;
+    /* adjust my name to be more centered with skills section and the about me content */
 }
+
 /* About Me Section Styles */
 .about-me {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem; 
-    gap: 3rem;   
+    padding: 2rem;
+    gap: 3rem;
 }
 
 .about-me-content {
@@ -73,20 +76,23 @@ H1 {
 
 .about-me img {
     flex: 1;
-    width:  auto;
+    width: auto;
     max-width: 250px;
     height: auto;
     border-radius: 50%;
     order: -1;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 /* For Smaller Screens, Where Layout Should Stacl */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .about-me {
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
         text-align: center;
     }
-    .about-me-content, .about-me img {
+
+    .about-me-content,
+    .about-me img {
         margin-left: 0;
         order: 0;
     }
@@ -130,11 +136,12 @@ H2 {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
 }
+
 /* For Smaller Screens */
 @media screen and (max-width: 768px) {
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
-    }    
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -171,17 +178,18 @@ H2 {
     object-fit: fill;
     margin-bottom: 2rem;
 }
+
 /* Media Query for Tablets and Smaller Screens */
 @media screen and (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-          /* Changes to a single column layout */
+        /* Changes to a single column layout */
     }
 
     .project-item img {
         max-width: 100%;
-          /* Adjust the image size for smaller screens */
-          /* You can also adjust margin if needed */
+        /* Adjust the image size for smaller screens */
+        /* You can also adjust margin if needed */
     }
 }
 
@@ -206,6 +214,7 @@ H2 {
 #features li {
     margin-bottom: 1.5rem;
 }
+
 #features strong {
     display: block;
     font-size: 1.1rem;
@@ -231,13 +240,15 @@ H2 {
 }
 
 /* Contact Me Section Styles */
-#contact {    
+#contact {
     padding: 2rem;
     text-align: center;
     margin-top: 2rem;
 }
-#contact h2, #contact p {
-    margin-bottom: 2rem;    
+
+#contact h2,
+#contact p {
+    margin-bottom: 2rem;
 }
 
 .get-in-touch h3 {
@@ -245,12 +256,12 @@ H2 {
 }
 
 .get-in-touch {
-    text-align: left;    
+    text-align: left;
 }
 
 .resume-button {
     display: inline-block;
-    background-color: var(--primary-button) ;
+    background-color: var(--primary-button);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -259,7 +270,7 @@ H2 {
     font-size: 1.2rem;
     margin-top: 1rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .resume-button:hover {
@@ -271,18 +282,19 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-}/* adding shadow to most of the element on the website */
+}
+
+/* adding shadow to most of the element on the website */
 .container {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-item {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contact {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1
-  );
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-item img,
