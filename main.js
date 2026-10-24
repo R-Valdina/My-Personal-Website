@@ -60,13 +60,19 @@ window.addEventListener('resize', updateNavigation);
 window.addEventListener('load', updateNavigation);
 updateNavigation();
 
-// If zoom or a short viewport makes the profile taller than the screen,
-// let the entire panel scroll naturally with the document.
+// Fit the pinned desktop profile to the viewport without nested scrolling.
 const sidebar = document.querySelector('.sidebar');
+const profile = document.querySelector('.sidebar-content');
 function updateSidebarPosition() {
-  sidebar.classList.toggle('sidebar-tall', sidebar.offsetHeight > window.innerHeight - 60);
+  profile.style.removeProperty('--profile-scale');
+  if (window.innerWidth <= 800) return;
+  const availableHeight = window.innerHeight - 36;
+  let scale = 1;
+  while (sidebar.getBoundingClientRect().height > availableHeight && scale > 0.4) {
+    scale = Math.max(0.4, scale - 0.025);
+    profile.style.setProperty('--profile-scale', scale.toFixed(3));
+  }
 }
-new ResizeObserver(updateSidebarPosition).observe(sidebar);
 window.addEventListener('resize', updateSidebarPosition);
 window.addEventListener('load', updateSidebarPosition);
 updateSidebarPosition();
