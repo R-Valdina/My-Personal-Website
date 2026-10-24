@@ -19,6 +19,7 @@ The site stacks vertically on mobile. The spotlight is disabled for touch input 
 - `index.html`: profile, experience, projects, AI & QA, skills, and contact.
 - `main.css`: layout, texture, panels, and responsive styling.
 - `main.js`: cursor spotlight, active navigation, and copyright year.
+- `case-studies/ai-assisted-qa/index.html`: Beyond Test Execution, a standalone static case study at `/case-studies/ai-assisted-qa/`.
 - `img/`: current portrait and existing project screenshots.
 - `Resume/`: current downloadable resume.
 
@@ -27,3 +28,7 @@ The gym application uses **Gym App** as a temporary name. Tracker details and re
 ## Before launch
 
 See [the launch checklist](docs/launch-checklist.md). The To-Do List application must be updated in a separate task before the portfolio goes live. Do not deploy or publish this redesign until launch is explicitly authorized.
+
+## Cloudflare Pages
+
+This is a static site: no framework, build command, or backend is required. Publish the repository root as the output directory when deployment is authorized; it contains `index.html`, shared assets, and the nested case-study directory. Preview nested routes with the local HTTP server above. After deployment, verify the case-study route directly on the production domain. Deployment has not been performed as part of the case-study update.

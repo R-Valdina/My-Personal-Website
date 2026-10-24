@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c1220">
+<title>Beyond Test Execution | Roxana Valdina</title>
+<meta name="description" content="How I’m evolving QA through AI-assisted test planning, multi-agent execution, and human oversight in an AI-accelerated development environment.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beyond Test Execution | Roxana Valdina">
+<meta property="og:description" content="An ongoing quality engineering initiative: the workload challenge, early results, and human judgment behind AI-assisted QA.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../main.css">
+<script src="../../main.js" defer></script>
+</head>
+<body class="case-study-page">
+<a class="skip-link" href="#main">Skip to case study</a>
+<div class="spotlight" aria-hidden="true"></div>
+<div class="page study-page">
+<aside class="sidebar panel study-sidebar" aria-label="Case study navigation"><div class="sidebar-content">
+<a class="resume-link" href="../../#ai">← Back to portfolio</a>
+<p class="eyebrow study-byline">Roxana Valdina / Case Study</p>
+<p class="study-sidebar-title">Beyond Test Execution</p>
+<nav class="navigation" aria-label="On this page"><a href="#at-a-glance" aria-current="location">At a glance</a><a href="#development-accelerated">The challenge</a><a href="#historical-analysis">Historical analysis</a><a href="#turning-point">The turning point</a><a href="#first-skills">Building the workflow</a><a href="#early-results">Early results</a><a href="#human-oversight">Guardrails &amp; oversight</a><a href="#human-and-ai">Human + AI testing</a><a href="#living-library">The living library</a><a href="#open-questions">Open questions</a><a href="#lessons">Lessons learned</a><a href="#current-status">Current status</a></nav>
+</div></aside>
+<main id="main" tabindex="-1">
+<article class="panel study-article" aria-labelledby="study-title">
+<header class="study-header">
+<p class="eyebrow">AI-Assisted QA / Quality Engineering / Process Improvement</p>
+<h1 id="study-title">Beyond Test Execution</h1>
+<p class="study-subtitle">Evolving Quality Assurance in an AI-Accelerated Development Environment</p>
+<p class="study-meta">Ongoing Engineering Initiative <span aria-hidden="true">·</span> 9 min read</p>
+<p>A personal account of investigating a growing QA workload, building an AI-assisted workflow, and learning where human judgment matters most.</p>
+</header>
+<section class="study-glance" id="at-a-glance" aria-labelledby="glance-heading"><h2 id="glance-heading">At a Glance</h2><div class="qa-metrics">
+  <div class="qa-metric"><h4>The Challenge</h4><p class="metric-value">~3× Development Output</p><p>AI-assisted development increased engineering velocity and the amount of work requiring QA validation.</p></div>
+  <div class="qa-metric"><h4>The Workload</h4><p class="metric-value">40–50 → 147 Hours</p><p>Estimated testing hours in one workload assessment as additional coverage was identified—not actual hours worked.</p></div>
+  <div class="qa-metric"><h4>The Breakthrough</h4><p class="metric-value">½ Release in One Day</p><p>Approximately half a release tested in a single day following its first deployment to UAT.</p></div>
+  <div class="qa-metric"><h4>The Efficiency Improvement</h4><p class="metric-value">~60 Minutes → ≤20 Minutes</p><p>Observed time for some development cards after introducing the initial AI-assisted workflow.</p></div>
+</div>
+<p class="metrics-context">These are approximate observations and estimates from early implementation, not controlled productivity benchmarks.</p></section>
+<section id="development-accelerated" aria-labelledby="development-accelerated-heading"><h2 id="development-accelerated-heading">When Development Accelerated, QA Hit a Wall</h2>
+<p>In September 2026, our engineering team introduced Claude into its development workflow. Development output increased approximately threefold, developer testing coverage improved, and the cycles of bugs and rework decreased. But the amount of work requiring QA validation increased dramatically.</p>
+<p>As the Lead Quality Assurance Engineer at a small company, I couldn’t realistically solve that challenge by adding enough people to match the increased output. The change also exposed weaknesses in how work had historically moved from Development to QA.</p>
+<p>Development cards didn’t always capture everything that had changed. Additional work, scope adjustments, design decisions, or effects on related functionality could go undocumented. By the time I tested a card, the developer had often moved on, making it difficult to reconstruct the full scope of validation.</p>
+<p>AI-assisted development began producing much more detailed explanations of code changes and implementation decisions. That transparency was valuable, but it also revealed testing scenarios we had previously overlooked.</p></section>
+<section id="historical-analysis" aria-labelledby="historical-analysis-heading"><h2 id="historical-analysis-heading">Investigating the Historical Problem</h2>
+<p>Before deciding how to respond, I used Claude to analyze our historical QA and development processes. I looked at TFS development work items from 2025 through September 2026, associated source-code changes, existing documentation, and time-tracking records. I wanted to understand the relationship between what had been documented and what had actually been implemented.</p>
+<p>The findings were uncomfortable, but useful:</p>
+<ul><li>Some development changes hadn’t been documented well enough to receive adequate test coverage.</li><li>In some cases, I had tested something different from the implementation because the work item hadn’t clearly communicated the intended functionality.</li><li>I had spent time testing functionality that wasn’t affected by a change.</li><li>Some testing approaches couldn’t meaningfully validate the behavior being investigated.</li></ul>
+<p>In one investigation of previously completed work, we identified six missing scenarios. Further investigation confirmed a potential code defect affecting those scenarios. That reinforced a fundamental lesson: you cannot adequately test what you don’t know has changed.</p>
+<p>This wasn’t simply an execution-speed problem. It involved information quality, traceability, communication, and deciding what actually needed validation. As coverage improved, some cards expanded from approximately six scenarios to twenty. In one workload assessment, the estimated testing effort rose from around 40–50 hours to 147 hours. Those were estimates, not hours I had already worked, but they made the limits of the existing approach clear.</p></section>
+<section id="turning-point" aria-labelledby="turning-point-heading"><h2 id="turning-point-heading">The Turning Point</h2>
+<p>My initial recommendation was to increase QA staffing. Leadership saw it differently: AI was changing how companies operated, and adding headcount wasn’t necessarily the preferred response.</p>
+<p>That was difficult to hear. I questioned whether AI could be trusted with work that had traditionally depended on human judgment. I also worried about my career. Would building these systems eventually eliminate my own position?</p>
+<p>Shortly afterward, I went camping with my nieces. For four days—and during roughly twenty hours of driving—I kept turning the problem over. Eventually, I stopped asking only what AI might take away and started asking what I could build with it.</p>
+<p>I remember reaching a somewhat defiant conclusion: “Alright, let’s automate myself right out of a job.”</p>
+<p>But the idea quickly became something more constructive. If I could build a repeatable, reliable QA process using AI, perhaps I could adapt that approach to different products, teams, and organizations. The workload challenge became an opportunity to rethink how quality engineering could work.</p></section>
+<section id="first-skills" aria-labelledby="first-skills-heading"><h2 id="first-skills-heading">Building the First QA Skills</h2>
+<p>I started by creating specialized Claude skills for test planning and test finalization. I tried the initial workflow against thirteen development cards from an upcoming release. Engineering hadn’t yet introduced its improved AI-generated handoff summaries, so the system had to work with the information already available on the cards.</p>
+<p>The experiment immediately showed me where the workflow needed attention. The plans required significant review, and the rules around assumptions, reporting, and escalation weren’t strong enough. Creating instructions was only the beginning; I had to examine what those instructions actually caused the system to do.</p>
+<p>Then I watched a demonstration of Playwright CLI and Claude coordinating multiple agents. It prompted a new question: what would testing look like if agents could work on different tasks concurrently?</p>
+<p>I developed a manual testing skill and incorporated emulators. Soon, I could test and finalize the same cards through an AI-assisted workflow that had previously required extensive manual effort. I caught up on a release that had fallen behind during my vacation, then continued refining the skills over subsequent releases. I also shared discoveries with Engineering so we could improve our development and testing practices together.</p><aside class="study-inset" aria-labelledby="timeline-heading"><h3 id="timeline-heading">How the initiative developed</h3><ol class="study-timeline"><li>Historical process analysis</li><li>Workload discovery and strategy shift</li><li>Initial planning and finalization skills</li><li>Thirteen-card pilot</li><li>Multi-agent testing and emulators</li><li>First meaningful release improvements</li><li>Ongoing development of reusable test records and automation</li></ol></aside></section>
+<section id="early-results" aria-labelledby="early-results-heading"><h2 id="early-results-heading">Early Results</h2>
+<p>One of the biggest breakthroughs came when I completed testing on approximately half a release in a single day after its first deployment to UAT. Previously, I might have spent that time working through only a few cards. Some cards that had historically taken around an hour could be completed in twenty minutes or less.</p>
+<p>These were early, observed examples—not controlled comparisons or a guarantee for every release. Still, they showed that the opportunity extended beyond executing test steps faster. The workflow reduced time spent:</p>
+<ul><li>Requesting SQL queries from developers.</li><li>Finding API endpoints and request bodies.</li><li>Clarifying implementation details and identifying affected application areas.</li><li>Writing extensive testing documentation during execution.</li><li>Preparing reproducible defect reports.</li></ul>
+<p>The process continued finding valid failures. In some cases, the investigation surfaced code context that helped developers understand where a failure originated.</p>
+<p>It also surfaced questions that needed human judgment. For example, outdated terminology remained in one area after a feature had been renamed elsewhere. Finding that inconsistency didn’t automatically determine its classification. I still needed to discuss with Engineering whether it was a defect, a scope change, or additional work.</p></section>
+<section id="human-oversight" aria-labelledby="human-oversight-heading"><h2 id="human-oversight-heading">Establishing Guardrails and Human Oversight</h2>
+<p>A large part of this initiative has been learning how AI makes mistakes and preventing those mistakes from silently changing the testing process.</p>
+<p>I’ve encountered misclicks, failed interface interactions, redundant scenarios, and instructions interpreted too literally. The system has sometimes assumed an industry-standard behavior instead of checking our actual requirements, producing a false failure. It has also requested developer help before investigating available information, or attempted to adjust instructions when actual behavior differed from expectations.</p>
+<p>I’ve established rules requiring the system to:</p>
+<ul><li>Report unexpected results and stop when a step can’t be executed as instructed.</li><li>Ask questions rather than invent assumptions.</li><li>Request my approval before changing a test plan.</li><li>Never silently rewrite expected results to make a test pass.</li><li>Distinguish passed, failed, and unexecuted tests.</li><li>Provide reproducible failure steps, screenshots, and supporting evidence.</li><li>Retain relevant API responses and SQL query information when those methods are used.</li><li>Request human review and confirmation of failures.</li></ul>
+<p>The workflow can run headlessly with multiple agents, but I supervise it through agent communications, execution reports, questions, summaries, and action items. Headless execution doesn’t mean unsupervised decision-making.</p><blockquote class="statement">AI can execute the work, but it cannot silently redefine what success means.</blockquote>
+  <figure class="study-inset workflow-figure"><figcaption id="workflow-title">The evolving workflow</figcaption><p>Human approval, evidence review, and risk-based validation remain part of the process. Reusable records and atomic planning are being developed further.</p><ol class="qa-workflow" aria-labelledby="workflow-title"><li>Development Change / Pull Request</li><li>AI-Assisted Change Analysis</li><li>Risk Assessment &amp; Atomic Test Planning</li><li class="human-step">Human Review &amp; Approval</li><li>AI-Assisted Test Execution</li><li class="human-step">Evidence &amp; Failure Review</li><li class="human-step">Human Validation Where Required</li><li>Finalization &amp; Reusable Test Records</li></ol><p class="workflow-note">Teal-bordered stages highlight review, approval, and independent validation.</p></figure></section>
+<section id="human-and-ai" aria-labelledby="human-and-ai-heading"><h2 id="human-and-ai-heading">Human and AI Testing Together</h2>
+<p>I’m developing a risk-based approach to deciding which work needs independent human verification. Currently, customer-critical functionality where a failure could cause a P1 incident receives manual validation alongside AI-assisted testing.</p>
+<p>One example involved estimating and signature processes that customers rely on for essential business operations. I independently reproduced failures Claude had identified, then conducted exploratory testing and found additional issues.</p>
+<p>I shared those findings with Claude, which dispatched agents to investigate and reproduce the new failures. The system then requested permission to add the scenarios to the test plan so they could be validated again after Engineering completed the rework.</p>
+<p>That interaction showed how human investigation and AI execution could strengthen one another. I remained responsible for understanding business risk, exploring unexpected behavior, and deciding which discoveries should become permanent coverage.</p></section>
+<section id="living-library" aria-labelledby="living-library-heading"><h2 id="living-library-heading">Building Toward a Living Test Library</h2>
+<p>My work now extends beyond individual releases. I’m restructuring test cases into smaller, atomic scenarios and maintaining structured records in formats such as JSON and YAML.</p>
+<p>The longer-term goal is a living test library connected to application functionality. Instead of recreating complete regression plans whenever code changes, I want to identify and reuse relevant tests. New functionality would introduce coverage, while existing tests would evolve with the application.</p>
+<p>I’m also collaborating with Engineering to establish Playwright infrastructure for more extensive automated testing. The architecture I’m working toward connects requirements and acceptance criteria, application functionality, source-code changes, atomic test cases, execution results, reusable documentation, and automated regression coverage.</p>
+<p>That library, change-based test selection, and expanded Playwright automation are still in development. They are goals I’m building toward, not completed implementations.</p></section>
+<section id="open-questions" aria-labelledby="open-questions-heading"><h2 id="open-questions-heading">Questions I’m Still Exploring</h2>
+<p>The early results are encouraging, but I don’t consider the system finished. I’m continuing to investigate:</p>
+<ul><li>Which features need independent human verification, and how risk should determine automation and oversight.</li><li>Where manual testing provides the most value in an increasingly automated development lifecycle.</li><li>How to keep coverage accurate as the application evolves.</li><li>How to securely handle passwords, credentials, secrets, and sensitive data in AI-assisted workflows.</li><li>How to maintain reusable documentation and automation without excessive maintenance overhead.</li><li>How to make the approach transferable across engineering environments.</li></ul>
+<p>These questions are part of the engineering work. Faster execution alone isn’t enough if the process becomes difficult to trust, secure, or maintain.</p></section>
+<section id="lessons" aria-labelledby="lessons-heading"><h2 id="lessons-heading">What I’ve Learned</h2>
+<p>The biggest change hasn’t simply been learning to make AI execute tests. It’s been learning to look at the entire quality process differently.</p>
+<p>I’ve had to question established practices, investigate uncomfortable findings, learn unfamiliar technologies, build new workflows, and repeatedly challenge the results produced by my own tools.</p>
+<p>AI-assisted testing hasn’t removed the need for human judgment. It has changed where that judgment can provide the greatest value. Instead of spending every available hour on repetitive execution and documentation, I can increasingly focus on understanding risk, investigating failures, improving coverage, and helping Engineering make better decisions.</p>
+<p>What began as an attempt to solve an unsustainable workload has become a broader interest in scalable, maintainable, and adaptable quality engineering. I’m still learning, experimenting, and building toward what comes next.</p></section>
+<section id="current-status" aria-labelledby="status-heading"><h2 id="status-heading">Where the initiative stands</h2><div class="status-grid"><div><h3>Currently in Practice</h3><ul><li>AI-assisted test planning</li><li>Multi-agent test execution</li><li>Human review and approval</li><li>Failure evidence and reproduction</li><li>Atomic test case structure</li><li>Structured testing documentation</li><li>Risk-based manual validation of critical functionality</li></ul></div><div><h3>In Development</h3><ul><li>Reusable, functionality-linked test library</li><li>Expanded Playwright automation</li><li>Test selection based on code changes</li><li>Broader automation and maintenance strategy</li><li>Formalized security and oversight practices</li></ul></div></div><p class="study-disclosure">This account uses generalized descriptions. It includes no employer source code, internal links, customer data, credentials, proprietary queries, or actual internal work-item identifiers.</p></section>
+<footer class="study-end"><a class="case-study-button" href="../../#ai">← Return to portfolio</a><p>© <span id="year">2026</span> Roxana Valdina</p></footer>
+</article>
+</main>
+</div>
+</body>
+</html>

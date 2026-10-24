@@ -31,11 +31,12 @@ window.addEventListener('blur', hideSpotlight);
 finePointer.addEventListener('change', hideSpotlight);
 reducedMotion.addEventListener('change', hideSpotlight);
 
-const sections = [...document.querySelectorAll('main > section[id]')];
+const sections = [...document.querySelectorAll('main section[id]')];
 const links = [...document.querySelectorAll('.navigation a')];
 let navigationPending = false;
 
 function updateNavigation() {
+  if (!sections.length) return;
   const readingPosition = window.innerHeight * 0.3;
   let active = sections[0];
   for (const section of sections) {

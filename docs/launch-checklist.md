@@ -12,7 +12,8 @@ The redesign is for review. Do not deploy or publish until the remaining work is
 - [ ] Add a real Gym App feature case study: requirements, acceptance criteria, development, testing, defects, completion, and lessons learned.
 - [ ] Review the QA tracker repository together; confirm its name, purpose, features, stack, and access options.
 - [ ] Add actual tracker screenshots and approved repository/demo links.
-- [ ] Elaborate on actual AI-in-QA workflows and how AI output is reviewed and validated.
+- [x] Explain actual AI-in-QA workflows, human oversight, early observations, and ongoing goals in the portfolio and Beyond Test Execution case study.
+- [ ] Review the case-study wording and approximate observations before deployment.
 - [ ] Show concrete AI-assisted and low-code/no-code tooling examples, with evidence for any efficiency claims.
 - [ ] **Update and improve the To-Do List application in a separate chat before website launch.**
 - [ ] Refresh the To-Do List description, screenshots, and links after that work.
