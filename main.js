@@ -59,3 +59,14 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', updateNavigation);
 window.addEventListener('load', updateNavigation);
 updateNavigation();
+
+// If zoom or a short viewport makes the profile taller than the screen,
+// let the entire panel scroll naturally with the document.
+const sidebar = document.querySelector('.sidebar');
+function updateSidebarPosition() {
+  sidebar.classList.toggle('sidebar-tall', sidebar.offsetHeight > window.innerHeight - 60);
+}
+new ResizeObserver(updateSidebarPosition).observe(sidebar);
+window.addEventListener('resize', updateSidebarPosition);
+window.addEventListener('load', updateSidebarPosition);
+updateSidebarPosition();
