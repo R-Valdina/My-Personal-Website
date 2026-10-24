@@ -168,3 +168,25 @@ main > section > :last-child { margin-bottom: 0; }
 .snake-project h3 { font-size: 20px; margin-bottom: 14px; }
 .snake-project p { font-size: 14px; }
 .snake-project .screenshot-caption { font-size: 12px; margin-top: 12px; }
+
+/* Native disclosure stays keyboard-accessible and works without JavaScript. */
+.project-summary { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; align-items: start; cursor: pointer; list-style: none; }
+.project-summary::-webkit-details-marker { display: none; }
+.project-summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 8px; border-radius: 4px; }
+.project-thumbnails { display: flex; flex-direction: column; gap: 7px; }
+.project-thumbnails img { display: block; width: 72px; height: 72px; object-fit: contain; border: 1px solid var(--line); border-radius: 4px; background: #000; }
+.project-summary-copy > span { display: block; }
+.project-summary-title { font-size: 17px; font-weight: 600; color: var(--heading); }
+.project-summary-description { font-size: 13px; margin-top: 6px; }
+.project-summary-tech { color: var(--teal); font-size: 11px; margin-top: 8px; }
+.project-summary-action { color: var(--teal); font-size: 12px; margin-top: 12px; }
+.expand-icon { display: inline-block; font-size: 16px; margin-left: 6px; }
+.when-open { display: none; }
+.snake-project[open] .when-open { display: inline; }
+.snake-project[open] .when-closed { display: none; }
+.snake-project[open] .expand-icon { transform: rotate(45deg); }
+.project-expanded { padding-top: 25px; }
+@media (min-width: 1200px) {
+  .project-summary { grid-template-columns: 151px minmax(0, 1fr); }
+  .project-thumbnails { flex-direction: row; }
+}
