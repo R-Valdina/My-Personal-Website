@@ -1,41 +1,34 @@
-# My Personal Website
+# Roxana Valdina — Personal Website
 
-## Overview
-This personal website showcases my journey as a software developer, highlighting my skills, projects, and professional aspirations. The site is built with HTML, CSS, and JavaScript, featuring a clean, responsive design and interactive elements.
+A static portfolio for a Lead QA Engineer, built with HTML, CSS, and JavaScript. The design uses a midnight navy/charcoal palette, a dotted background, raised panels with teal backlighting, a sticky profile sidebar, and an optional cursor spotlight.
 
-## Features
+## Local preview
 
-### About Me
-- An introduction section providing insight into my background, passion for technology, and career trajectory in software development.
+Open `index.html` in your browser, or run the following from the repository folder:
 
-### Skills
-- Detailed information on my technical skills, including proficiency in various programming languages, tools, and platforms.
-- Soft skills and business & management skills are also featured, emphasizing my all-around capabilities.
+```sh
+python3 -m http.server 8000
+```
 
-### Projects
-- Showcases key projects like a dynamic To-Do List application and a Java-based Snake game, complete with descriptions and visuals.
-- Each project reflects my technical expertise and problem-solving abilities.
+Open `http://localhost:8000` locally. Save changes and refresh to see updates. No package installation or build is required.
 
-### Upcoming Features & Future Projects
-- Outlines planned enhancements and future projects, indicating ongoing commitment to learning and growth.
+The site stacks vertically on mobile. The spotlight is disabled for touch input and reduced-motion preferences. Navigation, downloads, and content remain available without JavaScript.
 
-### Contact
-- Contact details for feedback, collaboration, and professional inquiries, along with a downloadable resume link.
+## Content and assets
 
-## Technologies Used
-- **HTML5**: For structuring the website content.
-- **CSS3**: Utilizing Flexbox and Grid for responsive layouts, along with box and text shadows for aesthetic enhancement.
-- **JavaScript**: Planned for future enhancements to increase interactivity and user engagement.
+- `index.html`: profile, experience, projects, AI & QA, skills, and contact.
+- `main.css`: layout, texture, panels, and responsive styling.
+- `main.js`: cursor spotlight, active navigation, and copyright year.
+- `case-studies/ai-assisted-qa/index.html`: Beyond Test Execution, a standalone static case study at `/case-studies/ai-assisted-qa/`.
+- `img/`: current portrait and existing project screenshots.
+- `Resume/`: current downloadable resume.
 
-## Setup
-Clone the repository and open `index.html` in a web browser to view the website.
+The gym application uses **Gym App** as a temporary name. Tracker details and real project case studies are still pending review.
 
-## Contributions
-Feedback, suggestions, and contributions are always welcome. Feel free to fork the repository and submit pull requests.
+## Before launch
 
-## Acknowledgements
-Special thanks to all who have offered feedback and suggestions, contributing to the development of this project.
+See [the launch checklist](docs/launch-checklist.md). The To-Do List application must be updated in a separate task before the portfolio goes live. Do not deploy or publish this redesign until launch is explicitly authorized.
 
----
+## Cloudflare Pages
 
-&copy; 2023 Roxana Valdina
+This is a static site: no framework, build command, or backend is required. Publish the repository root as the output directory when deployment is authorized; it contains `index.html`, shared assets, and the nested case-study directory. Preview nested routes with the local HTTP server above. After deployment, verify the case-study route directly on the production domain. Deployment has not been performed as part of the case-study update.
