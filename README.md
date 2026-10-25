@@ -1,4 +1,4 @@
-# Roxana Valdina — Personal Website
+# Rox Valdina — Personal Website
 
 A static portfolio for a Lead QA Engineer, built with HTML, CSS, and JavaScript. The design uses a midnight navy/charcoal palette, a dotted background, raised panels with teal backlighting, a sticky profile sidebar, and an optional cursor spotlight.
 
