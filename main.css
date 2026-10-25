@@ -164,10 +164,10 @@ main > section > :last-child { margin-bottom: 0; }
   .tracker-gallery { grid-template-columns: 1fr; }
 }
 
-.snake-project { border-top: 1px solid var(--line); padding-top: 25px; margin-top: 10px; }
-.snake-project h3 { font-size: 20px; margin-bottom: 14px; }
-.snake-project p { font-size: 14px; }
-.snake-project .screenshot-caption { font-size: 12px; margin-top: 12px; }
+.expandable-project { border-top: 1px solid var(--line); padding-top: 25px; margin-top: 10px; }
+.expandable-project h3 { font-size: 20px; margin-bottom: 14px; }
+.expandable-project p { font-size: 14px; }
+.expandable-project .screenshot-caption { font-size: 12px; margin-top: 12px; }
 
 /* Native disclosure stays keyboard-accessible and works without JavaScript. */
 .project-summary { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; align-items: start; cursor: pointer; list-style: none; }
@@ -182,9 +182,9 @@ main > section > :last-child { margin-bottom: 0; }
 .project-summary-action { color: var(--teal); font-size: 12px; margin-top: 12px; }
 .expand-icon { display: inline-block; font-size: 16px; margin-left: 6px; }
 .when-open { display: none; }
-.snake-project[open] .when-open { display: inline; }
-.snake-project[open] .when-closed { display: none; }
-.snake-project[open] .expand-icon { transform: rotate(45deg); }
+.expandable-project[open] .when-open { display: inline; }
+.expandable-project[open] .when-closed { display: none; }
+.expandable-project[open] .expand-icon { transform: rotate(45deg); }
 .project-expanded { padding-top: 25px; }
 @media (min-width: 1200px) {
   .project-summary { grid-template-columns: 151px minmax(0, 1fr); }

@@ -15,7 +15,7 @@ The redesign is for review. Do not deploy or publish until the remaining work is
 - [x] Explain actual AI-in-QA workflows, human oversight, early observations, and ongoing goals in the portfolio and Beyond Test Execution case study.
 - [ ] Review the case-study wording and approximate observations before deployment.
 - [ ] Show concrete AI-assisted and low-code/no-code tooling examples, with evidence for any efficiency claims.
-- [ ] **Update and improve the To-Do List application in a separate chat before website launch.**
-- [ ] Refresh the To-Do List description, screenshots, and links after that work.
+- [x] **Update and improve the To-Do List application in a separate chat before website launch.**
+- [x] Refresh the To-Do List description, screenshots, and source link after that work.
 - [ ] Confirm final project links, content, professional experience details, and resume.
 - [ ] Obtain explicit approval before publishing the personal website.

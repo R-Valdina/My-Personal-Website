@@ -98,11 +98,39 @@
           <ul class="tags" aria-label="Tracker focus"><li>QA Workflow</li><li>AI-Assisted Development</li><li>C# / WPF </li></ul>
         </article>
         <h3 class="earlier-title">Earlier projects</h3>
-        <article class="small-project">
-          <img src="img/ToDo%20List.jpg" alt="To-Do List application screenshot" width="105" height="72" loading="lazy">
-          <div><h3>To-Do List</h3><p>Task management with categories, persistent local storage, and a responsive layout.</p><p class="small-tech">HTML · CSS · JavaScript</p></div>
-        </article>
-        <details class="snake-project">
+        <details class="expandable-project todo-project">
+          <summary class="project-summary">
+            <span class="project-thumbnails" aria-hidden="true">
+              <img src="img/todo-overview-light.png" alt="" width="72" height="72" loading="lazy">
+              <img src="img/todo-work-dark.png" alt="" width="72" height="72" loading="lazy">
+            </span>
+            <span class="project-summary-copy">
+              <span class="project-summary-title">To-Do List</span>
+              <span class="project-summary-description">A local-first workspace for themed lists, priorities, deadlines, and everyday progress.</span>
+              <span class="project-summary-tech">HTML · CSS · JavaScript</span>
+              <span class="project-summary-action"><span class="when-closed">View project details</span><span class="when-open">Hide project details</span> <span class="expand-icon" aria-hidden="true">+</span></span>
+            </span>
+          </summary>
+          <div class="project-expanded">
+            <p>A browser-based task manager for organizing work, personal plans, and everything in between. The updated app brings customizable lists and practical task-management features together without an account or backend.</p>
+            <p>Lists have their own colors, background patterns, and deadlines. Tasks support priorities, due dates, editing, completion, and mouse, touch, or keyboard reordering. Search, progress bars, deadline warnings, and undo for the most recently deleted task help keep the work visible.</p>
+            <p>Data saves in the browser’s local storage, with validated JSON import and export for backups. Light and dark themes and a responsive layout support everyday use across screen sizes. Lists do not automatically sync between devices.</p>
+            <div class="tracker-gallery" aria-label="To-Do List application screenshots">
+              <figure>
+                <a href="img/todo-overview-light.png" aria-label="Open full-size To-Do List light mode screenshot"><img src="img/todo-overview-light.png" alt="Light-mode To-Do List workspace with themed lists, task priorities, due-date warnings, and completion progress." width="1440" height="1080" loading="lazy"></a>
+                <figcaption>Light-mode workspace <span aria-hidden="true">↗</span></figcaption>
+              </figure>
+              <figure>
+                <a href="img/todo-work-dark.png" aria-label="Open full-size To-Do List dark mode screenshot"><img src="img/todo-work-dark.png" alt="Dark-mode Work list with a grid theme, task priorities, urgent deadlines, and progress tracking." width="1440" height="1080" loading="lazy"></a>
+                <figcaption>Dark-mode Work list <span aria-hidden="true">↗</span></figcaption>
+              </figure>
+            </div>
+            <p class="screenshot-caption">Actual app screenshots using disposable example lists and a fixed demo date. Select an image to view it full size.</p>
+            <div class="project-links"><a class="inline-link" href="https://github.com/R-Valdina/To-Do-List">View source &amp; run instructions ↗</a></div>
+            <ul class="tags" aria-label="To-Do List technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Local Storage</li></ul>
+          </div>
+        </details>
+        <details class="expandable-project snake-project">
           <summary class="project-summary">
             <span class="project-thumbnails" aria-hidden="true">
               <img src="img/snake-gameplay.png" alt="" width="72" height="72" loading="lazy">
