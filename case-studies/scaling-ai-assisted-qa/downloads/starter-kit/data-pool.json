@@ -1,0 +1,49 @@
+{
+  "template_version": "1.0",
+  "fictional_example": true,
+  "environment": "[UAT environment]",
+  "refresh_reference": "[build or environment refresh ID]",
+  "protected_resources": [
+    "[protected workspace or account ID]"
+  ],
+  "entries": [
+    {
+      "entry_id": "DEMO-DATA-01",
+      "capabilities": [
+        "document-preview",
+        "restricted-user-access"
+      ],
+      "workspace_id": "DEMO-WORKSPACE-A",
+      "identity_ref": "[approved test identity reference]",
+      "role_id": "DEMO-ROLE-VIEWER",
+      "record_id": "DEMO-RECORD-101",
+      "prerequisites": [
+        "identity is active",
+        "identity belongs to this workspace",
+        "role has the required effective access",
+        "record has an existing document"
+      ],
+      "verification": {
+        "status": "candidate",
+        "method": "[read-only query/API/UI check appropriate to this app]",
+        "evidence_ref": null,
+        "verified_at": null,
+        "refresh_reference": null
+      },
+      "resources": [
+        "record:DEMO-WORKSPACE-A/DEMO-RECORD-101",
+        "role:DEMO-WORKSPACE-A/DEMO-ROLE-VIEWER"
+      ],
+      "sharing": {
+        "read": "shared",
+        "record_mutation": "exclusive",
+        "role_mutation": "exclusive-on-role-and-dependent-users"
+      },
+      "cleanup": {
+        "created_by_run": false,
+        "restore_method": "[capture original state, restore and verify]",
+        "on_failure": "quarantine"
+      }
+    }
+  ]
+}

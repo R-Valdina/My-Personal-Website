@@ -1,0 +1,69 @@
+/* Optional tools stay subordinate to the existing long-form article. */
+.scaling-qa-page .qa-resource {
+  border: 1px solid rgba(100, 255, 218, .23);
+  border-radius: 8px;
+  margin: 26px 0;
+  background: rgba(12, 18, 32, .4);
+}
+.scaling-qa-page .qa-resource > summary {
+  min-height: 64px;
+  padding: 18px 20px 18px 42px;
+  cursor: pointer;
+  color: var(--heading);
+  position: relative;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.scaling-qa-page .qa-resource > summary::-webkit-details-marker { display: none; }
+.scaling-qa-page .qa-resource > summary::before {
+  content: "›";
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  color: var(--teal);
+  font-size: 23px;
+}
+.scaling-qa-page .qa-resource[open] > summary::before { transform: rotate(90deg); }
+.scaling-qa-page summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 5px; }
+.scaling-qa-page .qa-resource summary small { display: block; font-size: 11px; color: var(--text); margin-top: 6px; }
+.scaling-qa-page .qa-resource-body { padding: 0 20px 24px; }
+.scaling-qa-page .qa-resource-body h3 { margin: 24px 0 12px; }
+.scaling-qa-page .qa-resource-body p,
+.scaling-qa-page .qa-resource-body li { font-size: 14px; }
+.scaling-qa-page .qa-resource-body p:last-child { margin-bottom: 0; }
+.scaling-qa-page .qa-example { margin: 8px 0 18px; }
+.scaling-qa-page .qa-example img { display: block; width: 100%; height: auto; border-radius: 5px; border: 1px solid var(--line); }
+.scaling-qa-page .qa-example a { display: block; }
+.scaling-qa-page .qa-example figcaption { font-size: 12px; margin-top: 10px; }
+.scaling-qa-page .qa-example figcaption a { display: inline; }
+.scaling-qa-page .qa-transcript { margin-bottom: 24px; }
+.scaling-qa-page .qa-transcript summary,
+.scaling-qa-page .qa-file-list summary { cursor: pointer; color: var(--teal); min-height: 44px; padding: 10px 0; font-size: 14px; }
+.scaling-qa-page .qa-transcript > div { border-left: 2px solid var(--line); padding-left: 18px; }
+.scaling-qa-page .qa-transcript h4 { color: var(--heading); font-size: 14px; margin: 16px 0 10px; }
+.scaling-qa-page .qa-prompt-panel { background: #0c1220; border: 1px solid var(--line); border-radius: 6px; padding: 18px; margin-top: 22px; }
+.scaling-qa-page .qa-prompt-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; justify-content: space-between; margin-bottom: 16px; }
+.scaling-qa-page .qa-prompt-toolbar h3 { font-size: 15px; margin: 0; }
+.scaling-qa-page .qa-copy { font: inherit; font-size: 12px; background: rgba(100, 255, 218, .07); color: var(--teal); border: 1px solid rgba(100, 255, 218, .4); border-radius: 4px; padding: 10px 12px; min-height: 44px; cursor: pointer; }
+.scaling-qa-page .qa-copy:hover { background: rgba(100, 255, 218, .14); }
+.scaling-qa-page .qa-copy:focus-visible,
+.scaling-qa-page .qa-prompt:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.scaling-qa-page .qa-copy[hidden] { display: none; }
+.scaling-qa-page .qa-copy:disabled { cursor: wait; }
+.scaling-qa-page .qa-prompt { font: inherit; font-size: 14px; line-height: 1.8; color: var(--heading); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; user-select: text; }
+.scaling-qa-page .qa-copy-status { font-size: 12px; color: var(--teal); margin: 12px 0 0; }
+.scaling-qa-page .qa-copy-status:empty { display: none; }
+.scaling-qa-page .resource-download { display: inline-block; margin-top: 20px; font-size: 13px; }
+.scaling-qa-page .qa-downloads { margin: 24px 0; }
+.scaling-qa-page .download-size { margin: 8px 0 22px; font-size: 12px; }
+.scaling-qa-page .qa-file-list ul { list-style: none; padding: 0; }
+.scaling-qa-page .qa-file-list li { display: flex; flex-wrap: wrap; gap: 4px 18px; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.scaling-qa-page .qa-file-list a { overflow-wrap: anywhere; }
+.scaling-qa-page .qa-file-list li span { font-size: 11px; }
+.scaling-qa-page .study-article { overflow-wrap: anywhere; }
+@media (max-width: 550px) {
+  .scaling-qa-page .qa-resource > summary { padding-right: 14px; font-size: 14px; }
+  .scaling-qa-page .qa-resource-body { padding: 0 14px 20px; }
+  .scaling-qa-page .qa-prompt-panel { padding: 14px; }
+}
