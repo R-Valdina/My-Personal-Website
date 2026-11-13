@@ -267,10 +267,12 @@ main > section > :last-child { margin-bottom: 0; }
 
 .study-article section > p, .study-header > p:not(.eyebrow) { max-width: 72ch; }
 
-/* Links between the original account and its follow-up. */
-.followup-card { margin-top: 28px; padding: 24px; border: 1px solid rgba(100, 255, 218, .2); border-radius: 8px; background: rgba(100, 255, 218, .025); }
-.followup-card h3 { font-size: 20px; line-height: 1.5; margin-bottom: 14px; }
-.followup-card p { font-size: 14px; }
-.followup-card .eyebrow { font-size: 10px; }
-.followup-card .inline-link { font-size: 14px; }
-.followup-note, .followup-card .followup-note { font-size: 12px; margin-top: 18px; margin-bottom: 0; }
+/* Equal-weight case-study entries within the initiative overview. */
+.case-studies-heading { font-size: 19px; margin: 30px 0 18px; }
+.case-study-list { display: grid; gap: 20px; }
+.case-study-card { padding: 24px; border: 1px solid rgba(100, 255, 218, .2); border-radius: 8px; background: rgba(100, 255, 218, .025); }
+.case-study-card h4 { color: var(--heading); font-size: 20px; line-height: 1.5; margin: 0 0 14px; }
+.case-study-card p { font-size: 14px; }
+.case-study-card .eyebrow { font-size: 10px; margin-bottom: 12px; }
+.followup-note { font-size: 12px; margin-top: 18px; margin-bottom: 0; }
+@media (max-width: 420px) { .case-study-card { padding: 20px; } }
