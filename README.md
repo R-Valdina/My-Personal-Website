@@ -20,6 +20,7 @@ The site stacks vertically on mobile. The spotlight is disabled for touch input 
 - `main.css`: layout, texture, panels, and responsive styling.
 - `main.js`: cursor spotlight, active navigation, and copyright year.
 - `case-studies/ai-assisted-qa/index.html`: Beyond Test Execution, a standalone static case study at `/case-studies/ai-assisted-qa/`.
+- `case-studies/scaling-ai-assisted-qa/`: follow-up article, optional practical resources, fictional examples, and downloadable starter kit. See [review notes and preview instructions](docs/scaling-qa-review.md).
 - `img/`: current portrait and existing project screenshots.
 - `Resume/`: current downloadable resume.
 

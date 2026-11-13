@@ -31,8 +31,10 @@ window.addEventListener('blur', hideSpotlight);
 finePointer.addEventListener('change', hideSpotlight);
 reducedMotion.addEventListener('change', hideSpotlight);
 
-const sections = [...document.querySelectorAll('main section[id]')];
 const links = [...document.querySelectorAll('.navigation a')];
+// Unlisted subsections retain the previous navigation group.
+const sections = [...document.querySelectorAll('main section[id]')]
+  .filter(section => links.some(link => link.hash === `#${section.id}`));
 let navigationPending = false;
 
 function updateNavigation() {
